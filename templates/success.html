@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Short Link Created{% endblock %}
+
+{% block content %}
+
+<h1>Success!</h1>
+
+<div class="card">
+    <div class="result-card">
+        <strong>Your short link is ready:</strong>
+        <div class="short-link">
+            <a href="{{ short_url }}" target="_blank">{{ short_url }}</a>
+        </div>
+
+        <p style="margin: 1.2rem 0 0.5rem;">
+            <strong>Original:</strong><br>
+            <a href="{{ original_url }}" target="_blank" style="color: var(--text-secondary);">
+                {{ original_url }}
+            </a>
+        </p>
+
+        <p>
+            <strong>Created:</strong><br>
+            {{ created_at.strftime("%Y-%m-%d %H:%M:%S UTC") }}
+        </p>
+    </div>
+
+    <div class="back">
+        <a href="/">← Create another short link</a>
+    </div>
+</div>
+
+{% endblock %}

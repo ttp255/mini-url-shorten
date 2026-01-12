@@ -1,0 +1,23 @@
+# requirements.txt - Mini URL Shortener 2026
+
+# Core
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+
+# MongoDB
+pymongo>=4.8.0
+
+# Configuration & env
+pydantic-settings>=2.0.0
+python-dotenv>=1.0.0
+
+# Templating & static
+jinja2>=3.1.0
+
+# Utilities
+shortuuid>=1.0.0              # better looking short codes than random hex
+python-multipart>=0.0.9       # form handling
+
+# Optional / nice to have (comment out if you want minimal)
+# slowapi>=0.1.9              # rate limiting
+# python-jose[cryptography]>=3.3.0  # if you add JWT later

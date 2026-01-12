@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Mini URL Shortener{% endblock %}
+
+{% block content %}
+
+<h1>Mini URL Shortener</h1>
+
+<div class="card">
+    {% if error %}
+    <div class="error-message">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST" action="/shorten">
+        <input 
+            type="url" 
+            name="original_url" 
+            placeholder="Paste your long URL here..."
+            required
+            autofocus
+        >
+        <button type="submit">Shorten URL</button>
+    </form>
+
+    <div class="info-text">
+        Simple • Fast • No registration required
+    </div>
+</div>
+
+{% endblock %}
