@@ -20,9 +20,7 @@ and current best practices in mind.
 
 ## 📂 Project structure
 
-    mini-url-shortener/
-    │
-    ├── app/                        # Core application code
+    ├── mini-url-shortener/                   # Core application code
     │   ├── __init__.py
     │   │
     │   ├── main.py                 # FastAPI application entry point
